@@ -22,14 +22,14 @@ Exit Option
 
 ## What I learned
 
-Structuring a program around a menu loop
-Using Python's 'platform' module to retrieve system and OS information
-Using Python's 'socket' module for network information and port checking
-Using 'os.system()' to perform a connection check
-Understanding how 'socket.connect_ex()' works
-Creating and using socket objects
-Debugging control flow 
-Handling user input and different menu options
+- Structuring a program around a menu loop
+- Using Python's 'platform' module to retrieve system and OS information
+- Using Python's 'socket' module for network information and port checking
+- Using 'os.system()' to perform a connection check
+- Understanding how 'socket.connect_ex()' works
+- Creating and using socket objects
+- Debugging control flow 
+- Handling user input and different menu options
 
 
 ## How to run
