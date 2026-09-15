@@ -3,13 +3,8 @@ import socket
 import os 
 
 
-def greet_user():
 
-    print ("\nWelcome to the Network Security Tool")
-
-
-greet_user()
-
+print ("\nWelcome to the Network Security Tool")
 
 
 def show_menu():
@@ -70,7 +65,7 @@ while True:
 
         print ("\nPort Check Selected.\n")
 
-        #Port check
+        #Port Check
 
         target = input ("Enter Target: ")
 
