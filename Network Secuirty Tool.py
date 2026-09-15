@@ -1,4 +1,3 @@
-import string
 import platform
 import socket 
 import os 
@@ -6,7 +5,7 @@ import os
 
 def greet_user():
 
-    print ("Welcome to the Network Security Tool \n")
+    print ("\nWelcome to the Network Security Tool")
 
 
 greet_user()
@@ -15,27 +14,22 @@ greet_user()
 
 def show_menu():
 
-    print ("1. System Information," \
-    " 2. Network Information," \
-    " 3. Connection Check," \
-    " 4. Port Check," \
-    " 5. Exit "\
-        )
+    print ("\n1. System Information \n2. Network Information \n3. Connection Check \n4. Port Check \n5. Exit ")
 
 
 while True:
 
     show_menu()
 
-    user_choice = input ("\n Choose an option: ")
+    user_choice = input ("\nChoose an option: ").strip()
 
     if user_choice == "1":
 
-        print ("System Informtaion Selected. ")
+        print ("\nSystem Information Selected.\n ")
 
         #System Information
         
-        print (f"This is your Opperating System: {platform.system()}")
+        print (f"This is your Operating System: {platform.system()}")
         print (f"This is your Network Name: {platform.node()}")
         print (f"This is your Processor: {platform.processor()}")
         print (f"This is your Machine type: {platform.platform()}")
@@ -44,37 +38,37 @@ while True:
 
     elif user_choice == "2":
 
-        print ("Network Information selected.")
+        print ("\nNetwork Information selected.\n")
 
         #Network Information
         
         host_name = socket.gethostname()
-        IP_addess = socket.gethostbyname(host_name)
+        IP_address = socket.gethostbyname(host_name)
 
         print (f"Host Name: {host_name}")
-        print (f"IP Address: {IP_addess}")
+        print (f"IP Address: {IP_address}")
 
 
     elif user_choice == "3":
 
-        print ("Connection Check Selected.")
+        print ("\nConnection Check Selected.")
 
         #Connection Check
 
+        print ("\nCHECKING...")
+
         response = os.system ("ping -n 1 8.8.8.8 > nul 2>&1")
 
-        print ("\n CHECKING...")
-
         if response == 0:
-            print ("\n SUCCESS \n  You have a live internet connection. \n")
+            print ("\nSUCCESS \n \nYou have a live internet connection. \n")
 
         else:
 
-            print ("FAILED \n  Destination unreachable. You do not have a live connection. \n")
+            print ("FAILED \n \nDestination unreachable. You do not have a live connection. \n")
 
     elif user_choice == "4":
 
-        print ("Port Check Selected.")
+        print ("\nPort Check Selected.\n")
 
         #Port check
 
@@ -88,20 +82,20 @@ while True:
 
         if connection_result == 0:
 
-            print ("Port is open")
+            print ("\nPort is open")
 
         else:
 
-            print ("Port is closed")
+            print ("\nPort is closed")
 
 
 
     elif user_choice == "5":
 
-        print ("\n Exiting...")
+        print ("\nExiting...\n")
         break
         
     else:
     
-        print ("Please choose one of the options provided")
+        print ("\nPlease choose one of the options provided")
         
